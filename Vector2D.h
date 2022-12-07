@@ -1,3 +1,5 @@
+#ifndef VECTOR2D_H
+#define VECTOR2D_H
 #include <iostream>
 #include <cmath>
 
@@ -150,3 +152,5 @@ class Vector2D {
             return (v1 * sin(angle * (1 - t)) + v2 * sin(angle * t)) / sin(angle);
         }
 };
+
+#endif
