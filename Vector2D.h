@@ -75,6 +75,10 @@ class Vector2D {
             return Vector2D(x / m, y / m);
         }
 
+        Vector2D perpendicular() const {
+            return Vector2D(-y, x);
+        }
+
         float angle(const Vector2D& v) const {
             return acos(dot(v) / (magnitude() * v.magnitude()));
         }
