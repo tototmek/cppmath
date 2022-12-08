@@ -87,8 +87,12 @@ class Vector2D {
             return Vector2D(-y, x);
         }
 
-        float angle(const Vector2D& v) const {
-            return acos(dot(v) / (magnitude() * v.magnitude()));
+        float angle(const Vector2D& v=Vector2D::right()) const {
+            float a = atan2(cross(v), dot(v));
+            if (a < 0) {
+                a += 2 * M_PI;
+            }
+            return a;
         }
 
         Vector2D rotate(float angle) const{
