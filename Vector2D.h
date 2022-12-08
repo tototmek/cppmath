@@ -30,6 +30,14 @@ class Vector2D {
             return Vector2D(x * f, y * f);
         }
 
+        Vector2D operator*(const Vector2D& v) const {
+            return Vector2D(x * v.x, y * v.y);
+        }
+
+        Vector2D operator/(const Vector2D& v) const {
+            return Vector2D(x / v.x, y / v.y);
+        }
+
         Vector2D operator/(const float& f) const {
             return Vector2D(x / f, y / f);
         }
